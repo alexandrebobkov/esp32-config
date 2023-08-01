@@ -1,7 +1,8 @@
 #include <Arduino.h>
 
 // Uncomment corresponding board
-#define devkit_30pin_001
+//#define devkit_30pin_001
+#define devkit_38pin_001
 //#define devkit_36pin_001
 
 /*
@@ -16,6 +17,7 @@
 /*
 #### ESP32 DEVKIT V1.1 DIY MALL           ####
 #### 30 PINS                              ####
+#### USB-C and USB-micro                  ####
 #### DEVELOPMENT BOARD SUPPORTED PIN OUTS ####
 ----------------------------------------------
 GPIO    | Physical  |   Description
@@ -82,7 +84,45 @@ D12           31
 D13           32
 ----------------------------------------------
 */
-uint8_t pins[] = {0,15,2,4,5,18,19,21,22,23,34,35,32,33,25,26,27,14,12,13}; // GPIO pins
+uint8_t pins[] = {0,15,2,4,5,18,19,21,22,23,34,35,32,33,25,26,27,14,12,13}; // 20 GPIO pins
+#endif
+
+#ifdef devkit_38pin_001
+/*
+##############################################
+*/
+/*
+#### ESP32                                ####
+#### 38 PINS                              ####
+#### USB-C                                ####
+#### DEVELOPMENT BOARD SUPPORTED PIN OUTS ####
+----------------------------------------------
+GPIO    | Physical  |   Description
+Pin     |           |
+----------------------------------------------
+              2         Built-in LED
+D15           3
+D2            4         Built-in LED     
+D4            5
+D5            8
+D18           9         
+D19           10                
+D21           11        
+D22           14        
+D23           15        
+D34           19        Input only        
+D35           20        Input only        
+D32           21        
+D33           22
+D25           23
+D26           24
+D27           25
+D14           26
+D12           27
+D13           28
+----------------------------------------------
+*/
+uint8_t pins[] = {15,2,0,4,16,17,5,18,19,21,22,23,32,33,25,26,27,14,12,13}; // 20 GPIO pins
 #endif
 
 void setup() {
