@@ -44,7 +44,6 @@ D13           28
 ----------------------------------------------
 */
 uint8_t LED   = 2;
-//uint8_t pins[] = {2,4,5,32,33,25,26,27,14,12,13,15,18,19,21,22,23}; // 20 pins
 uint8_t pins[] = {2,4,5,12,13,14,15,18,19,21,22,23,25,26,27,32,33}; // 20 GPIO pins
 #endif
 #ifdef devkit_36pin_001
@@ -70,8 +69,8 @@ D19           13        Not supported
 D21           14        Not supported
 D22           17        Not supported
 D23           18        Not supported
-D34           22        Not supported
-D35           23        Not supported
+D34           22        Input only 
+D35           23        Input only 
 D32           24        Not supported
 D33           25
 D25           26
@@ -83,6 +82,7 @@ D12           31
 D13           32
 ----------------------------------------------
 */
+uint8_t pins[] = {0,15,2,4,5,18,19,21,22,23,34,35,32,33,25,26,27,14,12,13}; // GPIO pins
 #endif
 
 void setup() {
