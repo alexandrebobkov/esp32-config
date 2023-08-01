@@ -18,16 +18,16 @@
 #### 30 PINS                              ####
 #### DEVELOPMENT BOARD SUPPORTED PIN OUTS ####
 ----------------------------------------------
-Nominal | Physical  |   Description
+GPIO    | Physical  |   Description
 Pin     |           |
 ----------------------------------------------
               2         Built-in LED
 D15           3
-D2            4         
+D2            4         Built-in LED     
 D4            5
 D5            8
 D18           9         
-D19           10        Not supported        
+D19           10                
 D21           11        
 D22           14        
 D23           15        
@@ -44,8 +44,8 @@ D13           28
 ----------------------------------------------
 */
 uint8_t LED   = 2;
-//uint8_t pins[] = {2,3,4,5,8,9,10,11,14,15,19,20,21,22,23,24,25,26,27,28}; // 20 pins
-uint8_t pins[] = {2,32,33,25,26,27,14,12,13,15,2,4,5,18,19,21,22,23}; // 20 pins
+//uint8_t pins[] = {2,4,5,32,33,25,26,27,14,12,13,15,18,19,21,22,23}; // 20 pins
+uint8_t pins[] = {2,4,5,12,13,14,15,18,19,21,22,23,25,26,27,32,33}; // 20 GPIO pins
 #endif
 #ifdef devkit_36pin_001
 /*
@@ -102,10 +102,8 @@ void loop() {
     Serial.println(pins[i]);
     pinMode(pins[i], OUTPUT);
     digitalWrite(pins[i], HIGH);
-    delay(500);
+    delay(250);
     digitalWrite(pins[i], LOW);
-    delay(500);
+    delay(250);
   }
-
-  delay(1000);
 }
