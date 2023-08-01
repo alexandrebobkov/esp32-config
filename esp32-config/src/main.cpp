@@ -87,13 +87,13 @@ D13           32
 
 void setup() {
   Serial.begin(115200);
-  Serial.println();
   Serial.println("Scanning pins ...");
   // put your setup code here, to run once:  
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  Serial.println();
   for (int i = 0; i<sizeof(pins); i++)
   {
     Serial.print("pin [");
